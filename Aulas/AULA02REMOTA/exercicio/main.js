@@ -2,7 +2,7 @@
 
 const links = {
     "nome": "SENAI",
-    "img": "avatar.jpg",
+    "img": "./img/01.jpg",
     "links": [
         {
             "titulo": "site pessoal",
@@ -22,31 +22,23 @@ const links = {
         }
     ]
 }
+const imagem = document.getElementById('avatar');
+imagem.src= links.img;
 
 const titulo = document.getElementById('titulo');
-var nomePessoa= links['nome'];
-titulo.innerText = nomePessoa;
+titulo.textContent= links.nome;
 
-console.log(nomePessoa);
+const a = document.createElement('a');
 
-function teseta(){
-    console.log(links.links.length);
-    for(var i = 0;i < lenghtArray; i++){
-        var link = links.links [i]['titulo'];
-        var url = links.links [i] ['url'];
-    }
+
+for (let i = 0; i < links['links'].length; i ++){
+    const linkTree = document.getElementById('linkTree');
+    const a = document.createElement('a');
+
+    a.classList.add('link');
+
+    a.href = links['links'][i]['url'];
+    a.innerText = links['links'][i]['titulo'];
+
+    linkTree.appendChild(a);
 }
-
-
-// var link1 = links.links[0]['titulo'];
-// var link2 = links.links[1]['titulo'];
-// var link3 = links.links[2]['titulo'];
-// var link4 = links.links[3]['titulo'];
-
-// var url1 = links.links[0]['url'];
-// var url2 = links.links[1]['url'];
-// var url3 = links.links[2]['url'];
-// var url4 = links.links[3]['url'];
-
-
-// console.log(tamanho);
