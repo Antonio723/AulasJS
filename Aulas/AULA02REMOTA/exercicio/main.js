@@ -2,7 +2,7 @@
 
 const links = {
     "nome": "SENAI",
-    "img": ".exercicio/img/01.jpg",
+    "img": "../img/01.jpg",
     "links": [
         {
             "titulo": "site pessoal",
